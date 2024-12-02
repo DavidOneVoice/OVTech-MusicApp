@@ -1,0 +1,152 @@
+#mainmedia{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#mainmedia section{
+    background-color: antiquewhite;
+    border: 2px solid red;
+    border-radius: 15px;
+    width: 70%;
+    height: 60%;
+    box-shadow: 0 0.3em 0.9em -0.4em white;
+    display: flex;
+    flex-direction: row;
+    
+
+}
+.media{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+#video{
+    border-left: 1px solid red;    
+}
+#video video{
+    width: 98%;
+    height: 70%;
+    margin-top: 3em;
+}
+#audio{
+    border-right: 1px solid red;
+}
+#audio audio{
+    border: 2px solid red;
+    border-radius: 20px;
+    align-self: center;
+}
+h1{
+    text-align: center;
+}
+#audio img{
+    width: 90%;
+    height: 60%;
+    border-radius: 15px;
+    margin-bottom: 1.5em;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border: 1px solid red;
+    padding: 0.5em 2em;
+    border-radius: 15px;
+    font-size: 1.1em;
+    transition: all 0.5s;
+    margin-top: 20em;
+    margin-left: 5em;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: mybutton 4s;
+    animation-timing-function: ease;
+}
+@keyframes mybutton {
+    0%{margin-top: -40em; margin-left: 0;}
+    40%{margin-top: -20em;}
+    70%{margin-top: 0em;}
+    100%{margin-top: 20em;
+        margin-left: 5em;}
+}
+a:hover{
+    border-color: white;
+    background-color: black;
+    color: red;
+}
+
+@media (max-width: 1400px) {
+    
+    #mainmedia{
+        flex-direction: column;
+        width: 100%;
+        height: 250vh
+        
+    }
+
+    #mainmedia section{
+        flex-direction: column;
+        width: 80%;
+        height: 200vh;
+        margin-top: -2em;
+        margin-bottom: -15em;
+    }
+    #mainmedia h1{
+        text-align: center;
+    }
+    .media{
+        width: 96%;
+        height: 100vh;
+    }
+    a{
+        animation: none;
+        margin-right: 5em;
+    }
+    #audio{
+        border-right: none;
+        border-bottom: 2px solid black;
+        margin-bottom: 1em;
+        margin-top: 2em;
+    }
+    #audio img{
+        width: 70%;
+        height: 60%;
+        margin-bottom: 4em;
+    }
+    #video{
+        border-left: none;
+        margin-top: 2em;
+    }
+    #video video{
+        width: 80%;
+        height: 60%;
+    }
+
+
+}
+
+@media (max-width:600px) {
+    a{
+        margin-right: 5em;
+        width: 50%;
+        text-align: center;
+    }
+    img{
+        margin-left: 2em;
+        width: 90%;
+    }
+    #audio audio{
+        height: 3em;
+        width: 70%;
+    }
+    #mainmedia section{
+        margin-bottom: -20em;
+    }
+}
